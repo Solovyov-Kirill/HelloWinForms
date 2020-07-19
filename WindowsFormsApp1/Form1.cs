@@ -101,7 +101,6 @@ namespace WindowsFormsApp1
 
             test = new Button();
             test.Location = new Point(300, 300);
-            test.Click += Test_Click;
             this.Controls.Add(test);
 
 
@@ -137,10 +136,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(find2);
         }
 
-        private void Test_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test");
-        }
 
         private void Find2_Click(object sender, EventArgs e)
         {
