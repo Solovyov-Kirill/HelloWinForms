@@ -94,9 +94,15 @@ namespace WindowsFormsApp1
         Button isEnable_TB;
         Button find2;
         TextBox textBox2;
+        Button test;
         public Form1()
         {
             InitializeComponent();
+
+            test = new Button();
+            test.Location = new Point(300, 300);
+            test.Click += Test_Click;
+            this.Controls.Add(test);
 
 
             textBox = new TextBox();
@@ -129,6 +135,11 @@ namespace WindowsFormsApp1
             find2.Location = new Point(235, 100);
             find2.Click += Find2_Click; ;
             this.Controls.Add(find2);
+        }
+
+        private void Test_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
         }
 
         private void Find2_Click(object sender, EventArgs e)
