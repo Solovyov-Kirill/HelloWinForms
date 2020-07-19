@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             
-
+            //rkgloire458rflgliir
 
             textBox = new TextBox();
             textBox.KeyDown += TextBox_KeyDown;
