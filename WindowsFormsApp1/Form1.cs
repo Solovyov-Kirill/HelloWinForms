@@ -90,84 +90,16 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        TextBox textBox;
-        Button isEnable_TB;
-        Button find2;
-        TextBox textBox2;
-        
+
+
         public Form1()
         {
             InitializeComponent();
 
-            
 
 
-            textBox = new TextBox();
-            textBox.KeyDown += TextBox_KeyDown;
-            textBox.Size = new Size(150, 150);
-            textBox.Multiline = true;
-            textBox.AcceptsTab = true;
-            textBox.TextAlign = HorizontalAlignment.Center;
-            textBox.Font = new Font("Times New Roman", 14);
-            this.Controls.Add(textBox);
 
-            textBox2 = new TextBox();
-            textBox2.KeyDown += TextBox_KeyDown;
-            textBox2.Size = new Size(150, 50);
-            textBox2.Location = new Point(200, 0);
-            textBox2.Multiline = true;
-            textBox2.AcceptsTab = true;
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            textBox2.Font = new Font("Times New Roman", 14);
-            this.Controls.Add(textBox2);
 
-            isEnable_TB = new Button();
-            isEnable_TB.Text = "find";
-            isEnable_TB.Location = new Point(235, 60);
-            isEnable_TB.Click += IsEnable_TB_Click;
-            this.Controls.Add(isEnable_TB);
-
-            find2 = new Button();
-            find2.Text = "find2";
-            find2.Location = new Point(235, 100);
-            find2.Click += Find2_Click; ;
-            this.Controls.Add(find2);
         }
 
-
-        private void Find2_Click(object sender, EventArgs e)
-        {
-            int nom = textBox.Text.IndexOf(textBox2.Text);
-            nom += nom+1;
-            MessageBox.Show($"{nom}");
-        }
-
-        private void IsEnable_TB_Click(object sender, System.EventArgs e)
-        {
-            //if (textBox.Enabled == false)
-            //    textBox.Enabled = true;
-            //else
-            //    textBox.Enabled = false;
-            //textBox.Enabled = !textBox.Enabled;
-
-            //MessageBox.Show("Yes!");
-            int res = textBox.Text.IndexOf(textBox2.Text);
-            MessageBox.Show(res < 0 ? "No" : "Yes");
-        }
-
-        private void TextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            //e.KeyValue    вернет ASCII номер символа
-            //MessageBox.Show(((char)e.KeyValue).ToString());
-            //if (Char.IsDigit((char)e.KeyValue))
-            //{
-            //    MessageBox.Show("Yes!");
-            //    //textBox.Text.IndexOf((char)e.KeyValue)    получить индекс введенного символа в строке
-            //    //textBox.Text.Remove                       удалить символ (с позиции, по количество)
-            //    //textBox.Text = textBox.Text.Remove(textBox.Text.IndexOf((char)e.KeyValue), 1);
-            //}
-            //в заголовок формы перенести длину текста
-            //this.Text = textBox.Text.Length.ToString();
-        }
     }
-}
