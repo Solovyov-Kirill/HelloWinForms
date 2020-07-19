@@ -94,14 +94,12 @@ namespace WindowsFormsApp1
         Button isEnable_TB;
         Button find2;
         TextBox textBox2;
-        Button test;
+        
         public Form1()
         {
             InitializeComponent();
 
-            test = new Button();
-            test.Location = new Point(300, 300);
-            this.Controls.Add(test);
+            
 
 
             textBox = new TextBox();
